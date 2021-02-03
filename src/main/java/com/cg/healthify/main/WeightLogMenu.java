@@ -41,7 +41,7 @@ public class WeightLogMenu {
 				weight.setUpdated_At(udate);
 				weight.setCreateTime(dtime);
 				weight.setUpdateTime(dtime);
-				weightimpl.addWeightLog();
+				weightimpl.addWeightLog(weight);
 				break;
 			case 2:
 				System.out.println("Confirm your FitnessID to Update: ");
@@ -52,17 +52,17 @@ public class WeightLogMenu {
 				LocalTime updatedTime=LocalTime.now();
 				weight.setUpdated_At(updatedDate);
 				weight.setUpdateTime(updatedTime);
-				weightimpl.UpdateWeightLog();
+				weightimpl.UpdateWeightLog(weight);
 				break;
 			case 3:
 				System.out.println("Confirm your FitnessID to delete your log: ");
 				weight.setId(sc.nextInt());	
-				weightimpl.DeleteWeightLog();
+				weightimpl.DeleteWeightLog(weight);
 				break;
 			case 4:
 				System.out.println("Confirm your FitnessID to find your log: ");
 				weight.setId(sc.nextInt());	
-				weightimpl.findWeightLog();
+				weightimpl.findWeightLog(weight);
 				break;
 			case 5:
 				System.exit(0);
